@@ -600,6 +600,10 @@ export function serializeTransfer(transfer: Transfer): Uint8Array {
     return ethers.utils.concat([type, accountId, from, to, token, amount, fee, nonce]);
 }
 
+export function hello() {
+    return "hello";
+}
+
 export function serializeChangePubKey(changePubKey: ChangePubKey): Uint8Array {
     const type = new Uint8Array([7]);
     const accountIdBytes = serializeAccountId(changePubKey.accountId);
